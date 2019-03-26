@@ -43,12 +43,6 @@
     <Reference Include="Autofac.Integration.WebApi, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.WebApi2.4.2.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="BirdFeed.Core, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BirdFeed.Core.1.0.15\lib\net452\BirdFeed.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="BitlyDotNET, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bitly.Net.0.0.6.0\lib\BitlyDotNET.dll</HintPath>
-    </Reference>
     <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Dapper.1.60.1\lib\net451\Dapper.dll</HintPath>
     </Reference>
@@ -115,9 +109,6 @@
     <Reference Include="restlessmedia.Module.Category, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.Category.0.2.0\lib\net452\restlessmedia.Module.Category.dll</HintPath>
     </Reference>
-    <Reference Include="restlessmedia.Module.Contact, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\restlessmedia.Module.Contact.0.2.0\lib\net452\restlessmedia.Module.Contact.dll</HintPath>
-    </Reference>
     <Reference Include="restlessmedia.Module.Data.EF, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.Data.EF.0.4.0\lib\net452\restlessmedia.Module.Data.EF.dll</HintPath>
     </Reference>
@@ -127,14 +118,8 @@
     <Reference Include="restlessmedia.Module.File, Version=1.13.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.File.1.13.0\lib\net452\restlessmedia.Module.File.dll</HintPath>
     </Reference>
-    <Reference Include="restlessmedia.Module.Place, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\restlessmedia.Module.Place.0.1.0\lib\net452\restlessmedia.Module.Place.dll</HintPath>
-    </Reference>
     <Reference Include="restlessmedia.Module.Security, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.Security.1.1.0\lib\net452\restlessmedia.Module.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="restlessmedia.Module.Twitter, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\restlessmedia.Module.Twitter.0.10.0\lib\net452\restlessmedia.Module.Twitter.dll</HintPath>
     </Reference>
     <Reference Include="SqlBuilder, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SqlBuilder.1.10.0\lib\net452\SqlBuilder.dll</HintPath>
