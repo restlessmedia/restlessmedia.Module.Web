@@ -154,9 +154,6 @@
     <Reference Include="System.Web.Http.WebHost, Version=5.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.5\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.5\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.5\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
@@ -178,11 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssembliesResolver.cs" />
-    <Compile Include="Asset\AssetBase.cs" />
-    <Compile Include="Asset\AssetCollection.cs" />
-    <Compile Include="Asset\Cache.cs" />
-    <Compile Include="Asset\CssAsset.cs" />
-    <Compile Include="Asset\JsAsset.cs" />
     <Compile Include="Configuration\AssetSettings.cs" />
     <Compile Include="Configuration\IAssetSettings.cs" />
     <Compile Include="Configuration\IInclude.cs" />
@@ -207,7 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
