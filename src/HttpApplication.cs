@@ -1,23 +1,12 @@
 ﻿using Autofac;
-using Autofac.Integration.Mvc;
-using Autofac.Integration.WebApi;
 using Microsoft.ApplicationInsights;
 using restlessmedia.Module.Security;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
-using System.Net.Http;
-using System.Net.Http.Formatting;
-using System.Reflection;
 using System.Web;
 using System.Web.Http;
-using System.Web.Http.Controllers;
-using System.Web.Http.Dispatcher;
-using System.Web.Http.Filters;
 using System.Web.Mvc;
-using System.Web.Routing;
-using System.Web.WebPages;
 
 namespace restlessmedia.Module.Web
 {
