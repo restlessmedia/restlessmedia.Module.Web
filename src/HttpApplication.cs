@@ -19,10 +19,10 @@ namespace restlessmedia.Module.Web
       HttpConfiguration configuration = GlobalConfiguration.Configuration;
       ContainerBuilder builder = new ContainerBuilder();
       IEnumerable<IWebModule> webModules = ModuleLoader<IWebModule>.FindModules();
-      GlobalConfiguration.Configure((config) => webModules.ForEach(webModule => webModule.Init(config, builder)));
+      GlobalConfiguration.Configure((config) => webModules.ForEach(webModule => webModule.OnStart(config, builder, webModules)));
       IContainer container =  builder.Build();
 
-      webModules.ForEach(webModule => webModule.Init(configuration, container));
+      webModules.ForEach(webModule => webModule.OnStart(configuration, container, webModules));
 
       SetDefaultCulture();
 

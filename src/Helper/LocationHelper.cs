@@ -101,7 +101,7 @@ namespace restlessmedia.Module.Web.Helper
         return url;
       }
 
-      return _fileSettings.CDN + url;
+      return string.Concat(_fileSettings.CDN, url);
     }
 
     private readonly IFileSettings _fileSettings;

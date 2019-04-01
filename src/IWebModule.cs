@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace restlessmedia.Module.Web
@@ -8,8 +9,8 @@ namespace restlessmedia.Module.Web
   /// </summary>
   public interface IWebModule
   {
-    void Init(HttpConfiguration httpConfiguration, ContainerBuilder builder);
+    void OnStart(HttpConfiguration httpConfiguration, ContainerBuilder builder, IEnumerable<IWebModule> webModules);
 
-    void Init(HttpConfiguration httpConfiguration, IContainer container);
+    void OnStart(HttpConfiguration httpConfiguration, IContainer container, IEnumerable<IWebModule> webModules);
   }
 }
