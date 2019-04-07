@@ -17,11 +17,19 @@ namespace restlessmedia.Module.Web
     public virtual void Application_Start()
     {
       HttpConfiguration configuration = GlobalConfiguration.Configuration;
-      ContainerBuilder builder = new ContainerBuilder();
+      ContainerBuilder containerBuilder = new ContainerBuilder();
       IEnumerable<IWebModule> webModules = ModuleLoader<IWebModule>.FindModules();
-      GlobalConfiguration.Configure((config) => webModules.ForEach(webModule => webModule.OnStart(config, builder, webModules)));
-      IContainer container =  builder.Build();
 
+      // register all modules
+      ModuleBuilder.RegisterModules(containerBuilder);
+
+      // register web modules with containerbuilder
+      GlobalConfiguration.Configure((config) => webModules.ForEach(webModule => webModule.OnStart(config, containerBuilder, webModules)));
+
+      // build
+      IContainer container =  containerBuilder.Build();
+
+      // register web modules with built container
       webModules.ForEach(webModule => webModule.OnStart(configuration, container, webModules));
 
       SetDefaultCulture();
