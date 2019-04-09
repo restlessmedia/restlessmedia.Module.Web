@@ -8,7 +8,7 @@ namespace restlessmedia.Module.Web
     public void RegisterComponents(ContainerBuilder containerBuilder)
     {
       containerBuilder.RegisterType<UIContext>().As<IUIContext>().SingleInstance();
-      containerBuilder.RegisterSettings<IAssetSettings>("restlessmedia/asset", required: true);
+      containerBuilder.RegisterSettings<IAssetSettings>("restlessmedia/asset", required: false);
     }
   }
 }
