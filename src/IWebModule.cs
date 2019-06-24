@@ -12,5 +12,8 @@ namespace restlessmedia.Module.Web
     void OnStart(HttpConfiguration httpConfiguration, ContainerBuilder builder, IEnumerable<IWebModule> webModules);
 
     void OnStart(HttpConfiguration httpConfiguration, IContainer container, IEnumerable<IWebModule> webModules);
+    
+    // called once all modules have been started
+    void OnStarted(HttpConfiguration httpConfiguration, IContainer container, IEnumerable<IWebModule> webModules);
   }
 }
