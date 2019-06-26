@@ -204,6 +204,8 @@
     </None>
     <None Include="restlessmedia.Module.Web.nuspec" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="WebModuleBase.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

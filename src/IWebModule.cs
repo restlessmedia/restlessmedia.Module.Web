@@ -1,4 +1,4 @@
-﻿using Autofac;
+using Autofac;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -12,5 +12,8 @@ namespace restlessmedia.Module.Web
     void OnStart(HttpConfiguration httpConfiguration, ContainerBuilder builder, IEnumerable<IWebModule> webModules);
 
     void OnStart(HttpConfiguration httpConfiguration, IContainer container, IEnumerable<IWebModule> webModules);
+
+    // called after OnStart routines
+    void OnStarted(HttpConfiguration httpConfiguration, IContainer container, IEnumerable<IWebModule> webModules);
   }
 }
