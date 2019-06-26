@@ -29,13 +29,16 @@ namespace restlessmedia.Module.Web
       // build
       IContainer container =  containerBuilder.Build();
 
-      // register web modules with built container
+      // web modules OnStart
       webModules.ForEach(webModule => webModule.OnStart(configuration, container, webModules));
 
       SetDefaultCulture();
 
       // added for odata
       configuration.Initializer(configuration);
+
+      // web modules OnStarted
+      webModules.ForEach(webModule => webModule.OnStarted(configuration, container, webModules));
     }
 
     public virtual void Session_Start(object sender, EventArgs e)
