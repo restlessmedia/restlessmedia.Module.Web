@@ -11,15 +11,20 @@ namespace restlessmedia.Module.Web
 {
   public class UIContext : IUIContext
   {
-    public UIContext(ISecurityService securityService, IFileService fileService, ICacheProvider cache, IAssetSettings assetSettings, IFileSettings fileSettings, IEmailSettings emailSettings, ILicenseSettings licenseSettings)
+    public UIContext(ISecurityService securityService, IFileService fileService, ICacheProvider cache, IFileSettings fileSettings, IEmailSettings emailSettings, ILicenseSettings licenseSettings)
     {
       Security = securityService ?? throw new ArgumentNullException(nameof(securityService));
       File = fileService ?? throw new ArgumentNullException(nameof(fileService));
       Cache = cache ?? throw new ArgumentNullException(nameof(cache));
-      AssetSettings = assetSettings ?? throw new ArgumentNullException(nameof(assetSettings));
       FileSettings = fileSettings ?? throw new ArgumentNullException(nameof(fileSettings));
       EmailSettings = emailSettings ?? throw new ArgumentNullException(nameof(emailSettings));
       LicenseSettings = licenseSettings ?? throw new ArgumentNullException(nameof(licenseSettings));
+    }
+
+    public UIContext(ISecurityService securityService, IFileService fileService, ICacheProvider cache, IAssetSettings assetSettings, IFileSettings fileSettings, IEmailSettings emailSettings, ILicenseSettings licenseSettings)
+      : this(securityService, fileService, cache, fileSettings, emailSettings, licenseSettings)
+    {
+      AssetSettings = assetSettings ?? throw new ArgumentNullException(nameof(assetSettings));
     }
 
     public IUserInfo AuthenticatedUser

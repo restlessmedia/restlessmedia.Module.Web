@@ -91,8 +91,8 @@
     <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
       <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
     </Reference>
-    <Reference Include="restlessmedia.Module, Version=0.35.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\restlessmedia.Module.0.35.0\lib\net452\restlessmedia.Module.dll</HintPath>
+    <Reference Include="restlessmedia.Module, Version=1.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\restlessmedia.Module.1.15.0\lib\net452\restlessmedia.Module.dll</HintPath>
     </Reference>
     <Reference Include="restlessmedia.Module.Address, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.Address.0.3.0\lib\net452\restlessmedia.Module.Address.dll</HintPath>
