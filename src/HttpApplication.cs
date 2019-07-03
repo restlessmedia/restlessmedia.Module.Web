@@ -27,10 +27,10 @@ namespace restlessmedia.Module.Web
       GlobalConfiguration.Configure((config) => webModules.ForEach(webModule => webModule.OnStart(config, containerBuilder, webModules)));
 
       // build
-      IContainer container =  containerBuilder.Build();
+      _container =  containerBuilder.Build();
 
       // web modules OnStart
-      webModules.ForEach(webModule => webModule.OnStart(configuration, container, webModules));
+      webModules.ForEach(webModule => webModule.OnStart(configuration, _container, webModules));
 
       SetDefaultCulture();
 
@@ -38,11 +38,12 @@ namespace restlessmedia.Module.Web
       configuration.Initializer(configuration);
 
       // web modules OnStarted
-      webModules.ForEach(webModule => webModule.OnStarted(configuration, container, webModules));
+      webModules.ForEach(webModule => webModule.OnStarted(configuration, _container, webModules));
     }
 
     public virtual void Session_Start(object sender, EventArgs e)
     {
+      // TODO: work out why we've done this - is it to initialise the session?!
       string id = Session.SessionID;
     }
 
@@ -102,7 +103,9 @@ namespace restlessmedia.Module.Web
 
     private T Resolve<T>()
     {
-      return (T)GlobalConfiguration.Configuration.DependencyResolver.GetService(typeof(T));
+      return _container.Resolve<T>();
     }
+
+    private IContainer _container;
   }
 }
