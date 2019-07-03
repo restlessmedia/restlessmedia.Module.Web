@@ -101,11 +101,19 @@ namespace restlessmedia.Module.Web
       Resolve<IWebSecurityProvider>().Acquire(Context);
     }
 
+    /// <summary>
+    /// Fired when the web application ends
+    /// </summary>
+    protected virtual void Application_End()
+    {
+      _container.Dispose();
+    }
+
     private T Resolve<T>()
     {
       return _container.Resolve<T>();
     }
 
-    private IContainer _container;
+    private static IContainer _container;
   }
 }

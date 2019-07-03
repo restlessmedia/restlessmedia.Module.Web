@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Http.Dispatcher;
 
 namespace restlessmedia.Module.Web
 {
+  [Obsolete("This should be moved to api module.")]
   internal class AssembliesResolver : IAssembliesResolver
   {
     public AssembliesResolver(ICollection<Assembly> assemblies = null)

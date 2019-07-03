@@ -2,6 +2,7 @@
 {
   public static class RouteExtensions
   {
+    [Obsolete("This should be moved to api module.")]
     public static void MapHttpRoute<T>(this HttpRouteCollection routes, string name, string action, string routeTemplate)
       where T : ApiController
     {
