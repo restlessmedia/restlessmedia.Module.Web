@@ -1,6 +1,9 @@
 ﻿using Autofac;
 using Microsoft.ApplicationInsights;
+using restlessmedia.Module.Configuration;
+using restlessmedia.Module.Data;
 using restlessmedia.Module.Security;
+using SqlBuilder.DataServices;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -39,6 +42,12 @@ namespace restlessmedia.Module.Web
 
       // web modules OnStarted
       webModules.ForEach(webModule => webModule.OnStarted(configuration, _container, webModules));
+
+      ModelDataService.OnCreate += (sender, connection) =>
+      {
+        // set context
+        LicenseHelper.SetContext(connection, _container.Resolve<ILicenseSettings>());
+      };
     }
 
     public virtual void Session_Start(object sender, EventArgs e)
@@ -107,6 +116,7 @@ namespace restlessmedia.Module.Web
     protected virtual void Application_End()
     {
       _container.Dispose();
+      ModelDataService.ClearAllEvents();
     }
 
     private T Resolve<T>()

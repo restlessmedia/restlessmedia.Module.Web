@@ -91,20 +91,20 @@
     <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
       <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
     </Reference>
-    <Reference Include="restlessmedia.Module, Version=1.15.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\restlessmedia.Module.1.15.0\lib\net452\restlessmedia.Module.dll</HintPath>
+    <Reference Include="restlessmedia.Module, Version=1.16.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\restlessmedia.Module.1.16.0\lib\net452\restlessmedia.Module.dll</HintPath>
     </Reference>
     <Reference Include="restlessmedia.Module.Address, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.Address.0.3.0\lib\net452\restlessmedia.Module.Address.dll</HintPath>
     </Reference>
-    <Reference Include="restlessmedia.Module.Category, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\restlessmedia.Module.Category.0.2.0\lib\net452\restlessmedia.Module.Category.dll</HintPath>
+    <Reference Include="restlessmedia.Module.Category, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\restlessmedia.Module.Category.1.2.0\lib\net452\restlessmedia.Module.Category.dll</HintPath>
     </Reference>
     <Reference Include="restlessmedia.Module.Data.EF, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.Data.EF.0.4.0\lib\net452\restlessmedia.Module.Data.EF.dll</HintPath>
     </Reference>
-    <Reference Include="restlessmedia.Module.Email, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\restlessmedia.Module.Email.1.2.0\lib\net452\restlessmedia.Module.Email.dll</HintPath>
+    <Reference Include="restlessmedia.Module.Email, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\restlessmedia.Module.Email.1.3.0\lib\net452\restlessmedia.Module.Email.dll</HintPath>
     </Reference>
     <Reference Include="restlessmedia.Module.File, Version=1.13.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.File.1.13.0\lib\net452\restlessmedia.Module.File.dll</HintPath>
@@ -112,11 +112,11 @@
     <Reference Include="restlessmedia.Module.Security, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\restlessmedia.Module.Security.1.1.0\lib\net452\restlessmedia.Module.Security.dll</HintPath>
     </Reference>
-    <Reference Include="SqlBuilder, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SqlBuilder.1.10.0\lib\net452\SqlBuilder.dll</HintPath>
+    <Reference Include="SqlBuilder, Version=1.16.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlBuilder.1.16.0\lib\net452\SqlBuilder.dll</HintPath>
     </Reference>
-    <Reference Include="SqlBuilder.DataServices, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SqlBuilder.DataServices.1.2.0\lib\net452\SqlBuilder.DataServices.dll</HintPath>
+    <Reference Include="SqlBuilder.DataServices, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlBuilder.DataServices.1.8.0\lib\net452\SqlBuilder.DataServices.dll</HintPath>
     </Reference>
     <Reference Include="StackExchange.Redis.StrongName, Version=1.2.6.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46, processorArchitecture=MSIL">
       <HintPath>..\packages\StackExchange.Redis.StrongName.1.2.6\lib\net45\StackExchange.Redis.StrongName.dll</HintPath>
