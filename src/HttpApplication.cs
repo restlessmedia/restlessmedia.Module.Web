@@ -43,6 +43,8 @@ namespace restlessmedia.Module.Web
       // web modules OnStarted
       webModules.ForEach(webModule => webModule.OnStarted(configuration, _container, webModules));
 
+      // subscribe to the oncreating event for model data service to set context on the connection
+      // this is only performed for web modules
       ModelDataService.OnCreate += (sender, connection) =>
       {
         // set context
