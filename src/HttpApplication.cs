@@ -96,7 +96,7 @@ namespace restlessmedia.Module.Web
 
       Exception lastException = Server.GetLastError();
 
-      if (HttpContext.Current.IsCustomErrorEnabled && lastException != null)
+      if (lastException != null)
       {
         new TelemetryClient().TrackException(lastException);
       }
