@@ -185,6 +185,7 @@
     <Compile Include="Extensions\HttpExtensions.cs" />
     <Compile Include="Extensions\RouteExtensions.cs" />
     <Compile Include="Helper\LocationHelper.cs" />
+    <Compile Include="HTMLHelper.cs" />
     <Compile Include="HttpApplication.cs" />
     <Compile Include="HttpCacheOptions.cs" />
     <Compile Include="IUIContext.cs" />
