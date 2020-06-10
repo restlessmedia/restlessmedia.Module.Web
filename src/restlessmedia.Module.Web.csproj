@@ -5,7 +5,7 @@
     <Product>restlessmedia.Module.Web</Product>
     <Description>Module web library.</Description>
     <Copyright>Copyright restlessmedia 2019</Copyright>
-    <Version>4.0.1</Version>
+    <Version>4.0.2</Version>
     <AssemblyVersion>3.0.0</AssemblyVersion>
     <FileVersion>3.0.0</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -45,7 +45,7 @@
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="RazorEngine" Version="3.10.0" />
-    <PackageReference Include="restlessmedia.Module" Version="5.0.0" />
+    <PackageReference Include="restlessmedia.Module" Version="5.0.5" />
     <PackageReference Include="restlessmedia.Module.Address" Version="1.0.0" />
     <PackageReference Include="restlessmedia.Module.Category" Version="2.0.1" />
     <PackageReference Include="restlessmedia.Module.Data.EF" Version="1.1.0" />
