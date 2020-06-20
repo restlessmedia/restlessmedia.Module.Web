@@ -37,9 +37,6 @@ namespace restlessmedia.Module.Web
 
       SetDefaultCulture();
 
-      // added for odata
-      configuration.Initializer(configuration);
-
       // web modules OnStarted
       webModules.ForEach(webModule => webModule.OnStarted(configuration, _container, webModules));
 
@@ -50,6 +47,11 @@ namespace restlessmedia.Module.Web
         // set context
         LicenseHelper.SetContext(connection, _container.Resolve<ILicenseSettings>());
       };
+
+      // added for odata
+      configuration.Initializer(configuration);
+
+      configuration.EnsureInitialized();
     }
 
     public virtual void Session_Start(object sender, EventArgs e)
