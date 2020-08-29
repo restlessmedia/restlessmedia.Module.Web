@@ -21,7 +21,7 @@ namespace restlessmedia.Module.Web
     {
       HttpConfiguration configuration = GlobalConfiguration.Configuration;
       ContainerBuilder containerBuilder = new ContainerBuilder();
-      IEnumerable<IWebModule> webModules = ModuleLoader<IWebModule>.FindModules();
+      IEnumerable<IWebModule> webModules = ModuleLoader<IWebModule>.FindModules("*.module.web");
 
       // register all modules
       ModuleBuilder.RegisterModules(containerBuilder);
