@@ -5,9 +5,9 @@
     <Product>restlessmedia.Module.Web</Product>
     <Description>Module web library.</Description>
     <Copyright>Copyright restlessmedia 2020</Copyright>
-    <Version>5.1.4</Version>
-    <AssemblyVersion>5.1.4</AssemblyVersion>
-    <FileVersion>5.1.4</FileVersion>
+    <Version>5.1.5</Version>
+    <AssemblyVersion>5.1.5</AssemblyVersion>
+    <FileVersion>5.1.5</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <Authors>Phil Cooper</Authors>
     <PackageId>restlessmedia.Module.Web</PackageId>

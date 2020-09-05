@@ -30,7 +30,7 @@ namespace restlessmedia.Module.Web
       GlobalConfiguration.Configure((config) => webModules.ForEach(webModule => webModule.OnStart(config, containerBuilder, webModules)));
 
       // build
-      _container =  containerBuilder.Build();
+      _container = containerBuilder.Build();
 
       // web modules OnStart
       webModules.ForEach(webModule => webModule.OnStart(configuration, _container, webModules));
@@ -119,7 +119,10 @@ namespace restlessmedia.Module.Web
     /// </summary>
     protected virtual void Application_End()
     {
-      _container.Dispose();
+      if (_container != null)
+      {
+        _container.Dispose();
+      }
       ModelDataService.ClearAllEvents();
     }
 
