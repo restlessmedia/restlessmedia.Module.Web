@@ -29,9 +29,9 @@ namespace restlessmedia.Module.Web
       return JsonConvert.DeserializeObject<T>(value);
     }
 
-    public static string Serialize(Type type, object value)
+    public static string Serialize(object value)
     {
-      return JsonConvert.SerializeObject(value, JsonOptions.Default);
+      return JsonConvert.SerializeObject(value, DefaultOptions);
     }
 
     public static string Serialize<T>(T value)

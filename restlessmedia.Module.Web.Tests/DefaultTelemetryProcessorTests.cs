@@ -41,11 +41,6 @@ namespace restlessmedia.Module.Web.Tests
         Exception = new HttpException()
       });
 
-      TestNoProcess(new ExceptionTelemetry
-      {
-        Exception = new TestException("System.Web.HttpApplication.ExecuteStep")
-      });
-
       TestNoProcess(new RequestTelemetry
       {
         ResponseCode = "401"

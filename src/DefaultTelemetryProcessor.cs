@@ -9,7 +9,6 @@ namespace restlessmedia.Module.Web
 {
   /// <summary>
   /// Filters out unwanted insights
-  /// TODO: refactor to have in core libraries?
   /// </summary>
   public class DefaultTelemetryProcessor : ITelemetryProcessor
   {
@@ -43,11 +42,11 @@ namespace restlessmedia.Module.Web
         if (exceptionTelemetry.Exception is HttpException)
         {
           return false;
-        }
+        } 
 
         // don't log task cancellation exceptions
         // these are typically when a client has disconnected from an async request
-        if ((exceptionTelemetry.Exception is TaskCanceledException || exceptionTelemetry.Exception is OperationCanceledException) && exceptionTelemetry.Exception.StackTrace.Contains("System.Web.HttpApplication.ExecuteStep"))
+        if (exceptionTelemetry.Exception is TaskCanceledException || exceptionTelemetry.Exception is OperationCanceledException)
         {
           return false;
         }

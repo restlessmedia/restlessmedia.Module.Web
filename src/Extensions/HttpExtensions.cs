@@ -10,9 +10,7 @@ namespace restlessmedia.Module.Web.Extensions
   {
     public static bool IsAuthorized(this HttpRequestBase httpRequest, string username, string password, bool convertBase64 = true)
     {
-      string authenticationUsername;
-      string authenticationPassword;
-      return TryGetAuthHeader(httpRequest, out authenticationUsername, out authenticationPassword, convertBase64) && string.Compare(authenticationUsername, username) == 0 && string.Compare(authenticationPassword, password) == 0;
+      return TryGetAuthHeader(httpRequest, out string authenticationUsername, out string authenticationPassword, convertBase64) && string.Compare(authenticationUsername, username) == 0 && string.Compare(authenticationPassword, password) == 0;
     }
 
     public static void ParseAuthCredentials(this string value, out string username, out string password, bool convertBase64 = true)
@@ -65,8 +63,7 @@ namespace restlessmedia.Module.Web.Extensions
     /// <returns></returns>
     public static bool TryGetAuthHeader(this HttpRequestBase httpRequest, out string value)
     {
-      bool success = TryGetHeader(httpRequest, _authorizationKey, out value);
-      return success;
+      return TryGetHeader(httpRequest, _authorizationKey, out value);
     }
 
     /// <summary>
@@ -106,9 +103,7 @@ namespace restlessmedia.Module.Web.Extensions
     /// <returns></returns>
     public static bool TryGetAuthHeader(this HttpRequestBase httpRequest, out string username, out string password, bool convertBase64 = true)
     {
-      string header;
-
-      if (TryGetAuthHeaderValue(httpRequest, out header, false) && header.Contains(_basicAuthorizationDelimiter))
+      if (TryGetAuthHeaderValue(httpRequest, out string header, false) && header.Contains(_basicAuthorizationDelimiter))
       {
         ParseAuthCredentials(header, out username, out password, convertBase64);
         return true;
@@ -129,7 +124,7 @@ namespace restlessmedia.Module.Web.Extensions
     public static WebHeaderCollection ToHeaderCollection(this IDictionary<string, string> values)
     {
       WebHeaderCollection headers = new WebHeaderCollection();
-
+      
       if (values.Count > 0)
       {
         foreach (KeyValuePair<string, string> keyValue in values)
